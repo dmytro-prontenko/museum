@@ -28,30 +28,68 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>THE MET</title>
   </head>
   <body>
     <header class="header">
-      <nav class="header__navigation">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <img src="./assets/images/header/logo.webp" alt="Main Logo"  class="header__logo"/>
-        </a>
-        <div class="header__buttons-wrapper">
-          <button class="header__button">
-            <i class="fa-solid fa-phone"></i>
-          </button>
-          <button class="header__button">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-        </div>
-      </nav>
-      <h1 class="hero__title">
-        Welcome <br />
-        to The MET
-      </h1>
+      <div class="header__wrapper">
+        <nav class="header__navigation">
+          <a href="/">
+            <div class="header__logo">THE MET</div>
+          </a>
+          <div class="header__buttons-wrapper">
+            <button class="header__button">
+              <i class="fa-solid fa-phone"></i>
+            </button>
+            <button class="header__button header__menu-btn">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </nav>
+        <h1 class="hero__title">
+          Welcome <br />
+          to The MET
+        </h1>
+      </div>
     </header>
     <main>Main</main>
     <footer>Footer</footer>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu__wrapper">
+        <div class="mobile-menu__header">
+          <a href="/" class="mobile-menu__logo">THE MET</a>
+          <button class="mobile-menu__close mobile-menu__close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-menu__nav">
+          <a href="/" class="mobile-menu__nav-link">HOME</a>
+          <a href="#about" class="mobile-menu__nav-link">ABOUT US</a>
+          <a href="#gallery" class="mobile-menu__nav-link">NOW ON VIEW</a>
+          <a href="#explore" class="mobile-menu__nav-link">EXPLORE ONLINE</a>
+          <a href="#contacts" class="mobile-menu__nav-link">CONTACTS</a>
+        </nav>
+        <div class="mobile-menu__contacts">
+          <address class="mobile-menu__address">
+            THE MET FIFTH AVENUE<br />
+            <a href="tel:+12125357710" class="mobile-menu__phone"
+              >+1 212-535-7710</a
+            >
+            THE MET CLOISTERS<br />
+            <a href="tel:+12129233700" class="mobile-menu__phone"
+              >+1 212-923-3700</a
+            >
+          </address>
+          <a href="#" class="mobile-menu__action">Call to order</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="./js/mobile-menu.js"></script> -->
+    <!-- В кінці body -->
+    <script type="module" src="./js/mobile-menu.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
