@@ -1007,3 +1007,19 @@ body.menu-open {
 }
 
 /* #endregion */
+
+/* #region Footer */
+footer {
+  height: 180px;
+  background: url("../assets/images/footer/footer.webp") no-repeat top/cover;
+
+  @media screen and (min-width: 768px) {
+    height: 359px;
+    background: url("../assets/images/footer/footer.webp") no-repeat 65% / cover;
+  }
+  @media screen and (min-width: 1440px) {
+    height: 359px;
+    background: url("../assets/images/footer/footer.webp") no-repeat top / cover;
+  }
+}
+/* #endregion */
