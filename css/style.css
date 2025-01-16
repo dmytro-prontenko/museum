@@ -222,6 +222,68 @@ button {
   width: 50%;
 }
 
+.header__contacts-wrapper {
+  position: relative;
+}
+
+.header__contacts {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+
+  transform: translateY(-50%);
+  white-space: nowrap;
+  padding-right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: end;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+  transform: translateX(20px);
+  transition: all 0.3s ease-in-out;
+
+  color: #fff;
+  text-shadow: 18px 4px 26px rgba(0, 0, 0, 0.44);
+  font-family: Cinzel;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px; /* 168.75% */
+  text-transform: uppercase;
+}
+
+.header__contact:hover {
+  scale: 1.05;
+}
+
+.header__contact:last-child {
+  margin-bottom: 0;
+}
+
+/* Анімація при наведенні */
+.header__contacts-wrapper:hover .header__contacts {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__contacts-wrapper:hover .header__contact {
+  transform: translateX(0);
+}
+
+.header__contact:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
 /* #endregion */
 
 /* #region Hero */
@@ -361,6 +423,11 @@ button {
   font-size: 18px;
   display: block;
   margin-bottom: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu__phone:hover {
+  color: #ffd700;
 }
 
 .mobile-menu__action {
@@ -586,7 +653,6 @@ body.menu-open {
   img:last-child {
   object-position: 0 25%;
 }
-
 
 .gallery__item-title {
   color: var(--main-red);
@@ -942,6 +1008,11 @@ body.menu-open {
   line-height: 27px; /* 168.75% */
 
   width: 88%;
+  transition: all 0.3s ease-in-out;
+}
+
+.contacts__link:hover {
+  color: var(--main-red);
 }
 
 .contacts__form {

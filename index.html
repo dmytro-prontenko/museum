@@ -39,9 +39,21 @@
             <div class="header__logo">THE MET</div>
           </a>
           <div class="header__buttons-wrapper">
-            <button class="header__button">
-              <i class="fa-solid fa-phone"></i>
-            </button>
+            <div class="header__contacts-wrapper">
+              <button class="header__button header__call-btn">
+                <i class="fa-solid fa-phone"></i>
+              </button>
+              <div class="header__contacts">
+                <a href="tel:+12125357710" class="header__contact"
+                  >THE MET FIFTH AVENUE <br />
+                  +1 212-535-7710</a
+                >
+                <a href="tel:+12129233700" class="header__contact"
+                  >THE MET CLOISTERS <br />
+                  +1 212-923-3700</a
+                >
+              </div>
+            </div>
             <button class="header__button header__menu-btn">
               <div class="menu-icon">
                 <span></span>
@@ -289,14 +301,15 @@
               </ul>
             </div>
             <form class="contacts__form" name="contact" method="POST" netlify>
-              <input type="text" name="name" placeholder="Name" />
+              <input type="text" name="name" placeholder="Name" required />
 
-              <input type="email" name="email" placeholder="Email" />
+              <input type="email" name="email" placeholder="Email" required />
 
               <textarea
                 name="message"
                 placeholder="Message"
                 rows="5"
+                required
               ></textarea>
 
               <button class="contacts__form-submit" type="submit">Send</button>
@@ -323,7 +336,7 @@
           <a href="#contacts" class="mobile-menu__nav-link">CONTACTS</a>
         </nav>
         <div class="mobile-menu__contacts">
-          <address class="mobile-menu__address">
+          <div class="mobile-menu__address">
             THE MET FIFTH AVENUE<br />
             <a href="tel:+12125357710" class="mobile-menu__phone"
               >+1 212-535-7710</a
@@ -332,7 +345,7 @@
             <a href="tel:+12129233700" class="mobile-menu__phone"
               >+1 212-923-3700</a
             >
-          </address>
+          </div>
           <div class="mobile-menu__action">Call to order</div>
         </div>
       </div>
