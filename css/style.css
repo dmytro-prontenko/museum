@@ -224,19 +224,21 @@ button {
 
 .header__contacts-wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .header__contacts {
+  display: none;
   position: absolute;
   right: 100%;
   top: 50%;
-
   transform: translateY(-50%);
   white-space: nowrap;
   padding-right: 20px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .header__contact {
@@ -245,69 +247,51 @@ button {
   justify-content: center;
   align-items: flex-end;
   text-align: end;
-  color: white;
-  text-decoration: none;
-  margin-bottom: 8px;
-  font-size: 14px;
-  transform: translateX(20px);
-  transition: all 0.3s ease-in-out;
-
   color: #fff;
   text-shadow: 18px 4px 26px rgba(0, 0, 0, 0.44);
   font-family: Cinzel;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 27px; /* 168.75% */
+  line-height: 27px;
   text-transform: uppercase;
+  transform: translateX(20px);
+  transition: transform 0.3s ease;
 }
 
 .header__contact:hover {
-  scale: 1.05;
+  transform: translateX(0) scale(1.05); /* Об'єднуємо transform властивості */
 }
 
-.header__contact:last-child {
-  margin-bottom: 0;
-}
-
-/* Анімація при наведенні */
-.header__contacts-wrapper:hover .header__contacts {
-  opacity: 1;
-  visibility: visible;
-}
-
-.header__contacts-wrapper:hover .header__contact {
-  transform: translateX(0);
-}
-
-.header__contact:nth-child(2) {
-  transition-delay: 0.1s;
-}
-
-/* #endregion */
-
-/* #region Hero */
-.hero__title {
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto;
-  color: #fff;
-  text-align: center;
-  font-family: Cinzel;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 40px */
-  letter-spacing: -1.5px;
-
-  @media screen and (min-width: 768px) {
-    font-size: 64px;
-    max-width: 392px;
+/* Десктопна версія (від 1024px) */
+@media screen and (min-width: 1024px) {
+  .header__contacts {
+    display: block;
   }
 
-  @media screen and (min-width: 1440px) {
-    font-size: 80px;
-    max-width: 498px;
+  .header__contacts-wrapper:hover .header__contacts {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header__contacts-wrapper:hover .header__contact {
+    transform: translateX(0); /* При ховері на wrapper */
+  }
+
+  /* При ховері безпосередньо на контакт */
+  .header__contacts-wrapper:hover .header__contact:hover {
+    transform: translateX(0) scale(1.05);
+  }
+}
+
+/* Мобільна версія */
+@media screen and (max-width: 1023px) {
+  .header__contacts {
+    display: none !important;
+  }
+
+  .header__call-btn {
+    cursor: pointer;
   }
 }
 
